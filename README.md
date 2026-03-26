@@ -9,5 +9,6 @@ To be improved on :
 2. make it OOD 
 
 
-<img width="601" height="337" alt="image" src="https://github.com/user-attachments/assets/ec2e56d8-23eb-42ff-a090-66604b2ae62e" />
+<img width="1258" height="581" alt="image" src="https://github.com/user-attachments/assets/bede83b4-088e-4a00-9b82-1982a93fbaa0" />
+
 
