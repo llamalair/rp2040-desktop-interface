@@ -12,9 +12,9 @@ To be improved on :
 <img width="1258" height="581" alt="image" src="https://github.com/user-attachments/assets/bede83b4-088e-4a00-9b82-1982a93fbaa0" />
 
 
-### User Instruction: 
+## User Instruction: 
 
-#### Mounting a device 
+### Mounting a device 
 
 **Manually if your system doesnt automatically:**
 
@@ -52,14 +52,13 @@ But ussually it should unmount on its own
 
 **Three main of doing that:** 
 
-i. Thornny: ( Python )
+1. Thornny: ( Python )
 Essentially just drag and drop, self explainatory
 
-ii. Visual Studio Code Extension ( C/C++ )
+2. Visual Studio Code Extension: ( C/C++ )
 Download the RaspberryPi Extension then press the button and follow the instruction, then compile it 
 
-iii. Manually Flashing it ( C/C++ )
-
+3. Manually Flashing it: ( C/C++ )
 mkdir a new folder 
 gitclone the raspberrypi repo 
 cp the Cmakelist.txt out 
@@ -70,8 +69,8 @@ then
 .make the build to create the .uf2 file 
 
 #### Flashing your file into the device 
-press the button of your device so it go into BOOTSEL mode
-plug in your usb into it 
+Press the button of your device so it go into BOOTSEL mode
+While holding the button plug in your usb into it 
 
 
 
