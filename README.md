@@ -55,8 +55,11 @@ But ussually it should unmount on its own
 
 **Three main of doing that:** 
 
-1. Thornny: ( Python )
-Essentially just drag and drop, self explainatory
+1. Thornny: ( Python )7.0
+Download the RPI_PICO-2O251209-v1.2.uf2 (something along the lines of this) from the website depending on your raspberry pi model 
+pico and picoWH is different
+Once you download it drag and drop the file into your device , or manually flash it 
+Then you can use Thornny to talk to it 
 
 2. Visual Studio Code Extension: ( C/C++ )
 Download the RaspberryPi Extension then press the button and follow the instruction, then compile it 
@@ -65,7 +68,7 @@ Download the RaspberryPi Extension then press the button and follow the instruct
 mkdir a new folder 
 gitclone the raspberrypi repo 
 cp the Cmakelist.txt out 
-install all the require compiler 
+install all the require compiler (cmake)
 then compile it 
 it should create a build folder 
 then 
@@ -85,5 +88,5 @@ Cause right now its just supplying power to the device
 
 
 
-
+ 
 
