@@ -12,11 +12,11 @@ To be improved on :
 <img width="1258" height="581" alt="image" src="https://github.com/user-attachments/assets/bede83b4-088e-4a00-9b82-1982a93fbaa0" />
 
 
-User Instruction: 
+### User Instruction: 
 
-1. Mounting a device 
+#### Mounting a device 
 
-Manually if your system doesnt automatically: 
+**Manually if your system doesnt automatically:**
 
 To show the last few kernel messages 
 ```bash
@@ -48,9 +48,9 @@ sudo umount /mnt/pico
 
 But ussually it should unmount on its own 
 
-2. Create your .uf2 file
+#### Create your .uf2 file
 
-Three main of doing that : 
+**Three main of doing that:** 
 
 i. Thornny: ( Python )
 Essentially just drag and drop, self explainatory
@@ -69,7 +69,7 @@ it should create a build folder
 then 
 .make the build to create the .uf2 file 
 
-3. Flashing your file into the device 
+#### Flashing your file into the device 
 press the button of your device so it go into BOOTSEL mode
 plug in your usb into it 
 
