@@ -48,7 +48,7 @@ sudo umount /mnt/pico
 
 But ussually it should unmount on its own 
 
-#### Create your .uf2 file
+### Create your .uf2 file
 
 **Three main of doing that:** 
 
@@ -68,7 +68,7 @@ it should create a build folder
 then 
 .make the build to create the .uf2 file 
 
-#### Flashing your file into the device 
+### Flashing your file into the device 
 Press the button of your device so it go into BOOTSEL mode
 While holding the button plug in your usb into it 
 
