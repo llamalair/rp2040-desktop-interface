@@ -19,11 +19,11 @@ int main()
 
         if (user_input == '1' ){
             pico_set_led(true);
-            printf("ON\n")
+            printf("ON\n");
         }
         else if (user_input == '0'){
             pico_set_led(false);
-            printf("OFF\n")
+            printf("OFF\n");
         }
     }
 }
