@@ -1,39 +1,21 @@
-﻿using System.IO.Ports;
+﻿using connectToHardware.ViewModel;
+using System.IO.Ports;
 using System.Windows;
 
 namespace PicoSerialWpf
 {
     public partial class MainWindow : Window
     {
-        private SerialPort raspberryConnection; // like the attribute in OOP 
-
+        
         public MainWindow()
         {
             InitializeComponent();
-            // SerialPort(string portName, int baudRate, Parity parity, int dataBits, StopBits stopBits) full constructor is this , but you only need the portName 
-            // you can set it by _serialPort.PortName = COM6 also
-            raspberryConnection = new SerialPort("COM6") // first one is port name
-            {
-                // these are the properties of type SerialPort https://learn.microsoft.com/en-us/dotnet/api/system.io.ports.serialport.dtrenable?view=net-10.0-pp
-                // you only need DtrEnable set to True as the default properties all work 
-                DtrEnable = true, // data terminal ready 
-                // reason we need this to set to true instead of false is because if its false the data wont be sent 
-                // do we need to set it to true for it to be able to send it 
-            };
-            raspberryConnection.Open();
-
+            // so everytime our main window is constructed , a view model is constructed for it
+            var vm = new MainWindowViewModel();
+            DataContext = vm; // essentially what is it saying is that when the .xaml file ask for any commands or properties create a viewmodel
+            // delegate all task to MainWindowViewModel 
         }
 
-        private void LedOn(object sender, RoutedEventArgs e) // oonce the .xaml file button is click this section of code will be executed 
-        {
-            // writeline is one of SerialPort method 
-            raspberryConnection.WriteLine("1"); // you write 1 into the connnection  https://learn.microsoft.com/en-us/dotnet/api/system.io.ports.serialport.writeline?view=net-10.0-pp&utm_
-        }
-
-        private void LedOff(object sender, RoutedEventArgs e)
-        {
-            raspberryConnection.WriteLine("0"); // vice versa 
-        }
 
     }
 }

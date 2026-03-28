@@ -11,18 +11,22 @@
             <ColumnDefinition Width="0.5*"/>
         </Grid.ColumnDefinitions>
 
+        <TextBlock Text="{Binding Pico.Status}" />
+
         <Button Content="ON"
                     Width="50"
                     Height="30"
                     Margin="0,0,8,0"
-                    Click="LedOn"
+               
+                    Command="{Binding OnCommand}"
                     Grid.Column="0"/>
 
         <Button Content="OFF"
                     Width="50"
                     Height="30"
                     Margin="0,0,8,0"
-                    Click="LedOff"
+               
+                    Command="{Binding OffCommand}"
                     Grid.Column="1"/>
     </Grid>
 </Window>
