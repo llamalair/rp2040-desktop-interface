@@ -10,12 +10,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-// The ViewModel implements the Mediator Design Pattern 
+// The ViewModel implements both the Mediator Design Pattern and the Observer Design Pattern 
+
+
 // Mediator centralises communication between objects 
 // So instead of View talking directly to Model , vice versa 
 // Mediator acts as the middle man between them 
 // Improve decoupling 
 // Cause without a mediator, if the view talk to model there will be alot of dependency 
+
+// Observable 
 
 
 // essentially replacing the code behind ( the MainWindow.xaml.cs file ) 
@@ -25,16 +29,20 @@ using System.Windows.Input;
 
 namespace connectToHardware.ViewModel
 {
-    
+    // the INotifyPropertyChanged is the IObservable Interface ( the interface that is being observe ) 
+    // the ViewModel class acts like the concreateObservable which implements the IObservable interface 
     public class MainWindowViewModel : INotifyPropertyChanged // this class requrie that we implement a PropertyChanged event 
 
     {
 
         private Service service; // essentially create a new service 
         private PicoState pico = new PicoState();// create the state object 
+
+        // command design pattern 
         public ICommand OnCommand { get;} // create the command that run on command 
         public ICommand OffCommand { get;} // create the commadn that run off command 
 
+        // observe design pattern 
         public event PropertyChangedEventHandler? PropertyChanged; // this is an event ( an event is something that people can subscribe to and it will notify PropertyChanged when something change 
 
         // you want it to be already there so you get it at the start 
