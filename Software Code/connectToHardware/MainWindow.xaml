@@ -6,10 +6,8 @@
         xmlns:local="clr-namespace:PicoSerialWpf"
         Title="Pico Serial Control" Height="450" Width="800">
 
+<!-- two design pattern , two different kinds of binding , textblock binding is observer , button binding is command--> 
 
-<!-- the view implement the observer pattern, the binding acts as the observer --> 
-<!-- essentially the The View observes the ViewModel through the binding system-->
-<!-- the binding acts as the Concrete Observer-->
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -19,6 +17,9 @@
 
         <TextBlock Text="{Binding ErrorMessage}" />
         <TextBlock Text="{Binding RealStatus}" Grid.Column="1"/>
+        <!-- the view implement the observer pattern, the binding acts as the observer --> 
+        <!-- essentially the The View observes the ViewModel through the binding system-->
+        <!-- the binding acts as the Concrete Observer (not the same as the button binding )--> 
 
         <Button Content="ON"
                     Width="50"
