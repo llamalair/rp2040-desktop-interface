@@ -5,6 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PicoSerialWpf"
         Title="Pico Serial Control" Height="450" Width="800">
+
+
+<!-- the view implement the observer pattern, the binding acts as the observer --> 
+<!-- essentially the The View observes the ViewModel through the binding system-->
+<!-- the binding acts as the Concrete Observer-->
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.5*"/>
@@ -20,6 +26,7 @@
                     Margin="0,0,8,0"
                
                     Command="{Binding OnCommand}"
+                        
                     Grid.Column="0"/>
 
         <Button Content="OFF"
