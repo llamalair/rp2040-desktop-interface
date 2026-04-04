@@ -31,6 +31,9 @@ namespace connectToHardware.MVVM
         public RelayCommand(Action execute) // when you call this method with new RelayCommand(LedOn) the LedOn is the execute 
         {
             _execute = execute;
+            // the constructor of relay command 
+            // _execute = TurnOn()
+            // the method is store inside _execute in this case 
         }
 
         public void Execute(object? parameter) // when the user press the button this section will be executed 

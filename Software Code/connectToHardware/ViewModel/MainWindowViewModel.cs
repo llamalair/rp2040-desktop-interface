@@ -92,6 +92,7 @@ namespace connectToHardware.ViewModel
             // RelayCommand is the Concreate Command 
             // Creating concreate command objects 
             OnCommand = new RelayCommand(TurnOn);
+            // turn on it pass as contructor in this case 
             OffCommand = new RelayCommand(TurnOff);
 
         }

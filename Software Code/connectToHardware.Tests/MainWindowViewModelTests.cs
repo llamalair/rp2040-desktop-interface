@@ -15,11 +15,15 @@ namespace connectToHardware.Tests
         public void OnCommand_WhenStatusIsOff_SetsStatusToOn()
 
         {
+            // arrange - go get your variable , whatever you need , your classes 
             FakeService fakeservice = new FakeService();
             MainWindowViewModel vm = new MainWindowViewModel(fakeservice);
 
-            vm.OnCommand.Execute(null); // essentailly the same as turnon 
+            // act - execute this function 
+            vm.OnCommand.Execute(null);
+            // you call the OnCommand ( run the command without argument ) 
 
+            // assert - whatever is return is it what you want 
             Assert.Equal("ON", vm.RealStatus);
 
         }
