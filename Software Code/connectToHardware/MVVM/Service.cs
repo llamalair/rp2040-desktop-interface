@@ -4,11 +4,11 @@ using System.IO.Ports;
 
 namespace connectToHardware.MVVM
 {
-    class Service
+    class Service : IService
     // responsible for actual hardware connection 
     {
         private SerialPort raspberryConnection; // like the attribute in OOP 
-        public string result;
+        public string result = string.Empty;
 
         public Service() {
 
@@ -54,7 +54,7 @@ namespace connectToHardware.MVVM
         //}
 
         // for in the future 
-        public string readMe()
+        public string ReadMe()
         {
             result = raspberryConnection.ReadLine();
             return result;

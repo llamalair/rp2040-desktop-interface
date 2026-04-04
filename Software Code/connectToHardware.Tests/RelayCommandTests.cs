@@ -7,7 +7,11 @@ namespace connectToHardware.Tests
 {
     public class RelayCommandTests
     {
-        [Fact] // to tell Xunit that this is a method that needs testing
+        // we use fact cause we want it to be always true else we would use theory 
+        [Fact]
+        // to test execute 
+
+        // MethodName_Condition_ExpectedResult -- namign convention 
         public void Execute_CallsProvidedAction()
         {
             bool wasCalled = false;
@@ -19,6 +23,7 @@ namespace connectToHardware.Tests
         }
 
         [Fact]
+        // to test canexecute 
         public void CanExecute_AlwaysReturnsTrue()
         {
             var command = new RelayCommand(() => { });

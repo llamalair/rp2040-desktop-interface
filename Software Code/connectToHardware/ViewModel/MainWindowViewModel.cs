@@ -35,7 +35,7 @@ namespace connectToHardware.ViewModel
 
     {
 
-        private Service service; // essentially create a new service 
+        private IService service; // essentially create a new service 
         private PicoState pico = new PicoState();// create the state object 
 
         // command design pattern 
@@ -86,14 +86,18 @@ namespace connectToHardware.ViewModel
         }
 
 
-        public MainWindowViewModel()
+        public MainWindowViewModel(IService service)
         {
-            service = new Service();
+            this.service = service;
             // RelayCommand is the Concreate Command 
             // Creating concreate command objects 
             OnCommand = new RelayCommand(TurnOn);
             OffCommand = new RelayCommand(TurnOff);
 
+        }
+
+        public MainWindowViewModel() : this(new Service())
+        {
         }
 
 
@@ -119,8 +123,7 @@ namespace connectToHardware.ViewModel
             ErrorMessage = "";
             count = 0;
             
-            
-            
+             
             
         }
 

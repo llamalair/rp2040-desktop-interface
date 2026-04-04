@@ -38,7 +38,7 @@ namespace connectToHardware.MVVM
             _execute();
         }
 
-        public bool CanExecute(object parameter)
+        public bool CanExecute(object? parameter)
         {
             // will need to update it to cant press it when its already on 
             return true;
