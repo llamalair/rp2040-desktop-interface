@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6 # the github action version 
 
-      - uses: actions/setup-dotnet@v6 
+      - uses: actions/setup-dotnet@v5
         with:
           dotnet-version: '8.0.x' # semantic version to just get the most updated version 
       # the commands you use to run your normal testing files 
