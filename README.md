@@ -6,7 +6,7 @@ Utilise WPF to create a UI coded in .xaml and C# that interacts with the backend
 
 <img width="1258" height="581" alt="image" src="https://github.com/user-attachments/assets/bede83b4-088e-4a00-9b82-1982a93fbaa0" />
 
-# Hardware
+# Hardware / Embedded System 
 
 ## User Instruction: 
 
@@ -80,22 +80,32 @@ Your PC/laptop wont detect it anymore ( as no files are being send anymore ) - y
 Cause right now its just supplying power to the device  
 
 
-# Software 
+# Software / Host Application 
 Have to use visual studio instead of visual code  
 Device talk to PC through USB using SerielPort library ( You have to download the library )
 
-WPF Part of it:
+WPF Part of it: ( MVVM ) 
 
-Two main file : 
+View : 
 
 MainWindow.xaml : ( Like the UI , like how html work )  
-Essentially the only important is the Click="LedOn" and Click="LedOff" which will call the codebehind 
+Essentially the only important is the binding which utilises the observer design pattern ( for updating the UI ) and the command design pattern ( to invoke the execute method ) 
 
 
 MainWindow.xaml.cs : ( The codebehind , like how javacscript work )  
-Important section of the code are : 
+Just to initiase 
 
-*public Mainwindow()*
+ViewModel: 
+
+MainWindowViewModel.cs 
+
+Model : 
+PicoState.cs (which only hold the state of the pico and nothing more)
+
+Helper : 
+RelayCommand.cs 
+IService.cs ( Interface just so we can test the viewmodel ) 
+Service.cs ( The part that actually talks to the hardware ) 
 first it initialise the component 
 then it create a new object of type SerialPort ( a class you have to read the documentation to understand most of it) , rn the only thing important is the portName 
 and set the properties ( attributes ) of the DTR as true 
@@ -109,6 +119,9 @@ and when the device recieve 1 it will turn the light on
 *public void LedOff()*
 .WriteLine("0") : vice versa 
 when the device receive 0 it will turn the lights off 
+
+
+
 
 
 
